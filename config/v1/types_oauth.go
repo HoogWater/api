@@ -527,6 +527,9 @@ type OpenIDIdentityProvider struct {
 	// It must use the https scheme with no query or fragment component.
 	Issuer string `json:"issuer"`
 
+	// Add capability to skip the userinfo_endpoint, this is to allow ADFS with custom claims to be used
+	SkipUserInfo bool `json:"skip_userinfo"`
+
 	// claims mappings
 	Claims OpenIDClaims `json:"claims"`
 }

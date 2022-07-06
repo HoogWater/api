@@ -341,6 +341,10 @@ spec:
                           issuer:
                             description: issuer is the URL that the OpenID Provider asserts as its Issuer Identifier. It must use the https scheme with no query or fragment component.
                             type: string
+                          skip_userinfo:
+                            description: userinfo_endpoint field will be ignore. This is to allow custom claims to be used in ADFS
+                            type: boolean
+                            default: false
                       requestHeader:
                         description: requestHeader enables user authentication using request header credentials
                         type: object
